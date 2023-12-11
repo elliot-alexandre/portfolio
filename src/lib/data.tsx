@@ -84,8 +84,10 @@ export const projects = [
     title: "Newrade Design-System",
     category: ["Front-End"],
     tags: ["React", "Front-End", "UI/UX", "Design System"],
-    shortDescription: "",
-    description: "",
+    shortDescription:
+      "Collaborated with the talented Philipe Leger on the creation of the 'Newrade Design System,' a transformative project that set the foundation for cohesive and visually stunning digital experiences. Our meticulous teamwork brought forth a comprehensive system, ensuring consistency and efficiency across various design elements. From color schemes to UI components, the Newrade Design System is a testament to our commitment to elevating user interfaces through thoughtful collaboration and meticulous attention to detail.",
+    description:
+      "Collaborated with the talented Philipe Leger on the creation of the 'Newrade Design System,' a transformative project that set the foundation for cohesive and visually stunning digital experiences. Our meticulous teamwork brought forth a comprehensive system, ensuring consistency and efficiency across various design elements. From color schemes to UI components, the Newrade Design System is a testament to our commitment to elevating user interfaces through thoughtful collaboration and meticulous attention to detail",
     tech: ["Node.js", "Typescript", "React", "Gatsby", "Figma Api"],
     source: { url: "/projects/newrade-design-system" },
     link: [
