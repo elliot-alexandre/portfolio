@@ -84,7 +84,7 @@ export default function Post(data: any) {
               </WrapItem>
             ))}
           </Wrap>
-          <Text color={"gray.500"} noOfLines={7}>
+          <Text color={"gray.500"} noOfLines={5}>
             {data.shortDescription}
           </Text>
           <Button

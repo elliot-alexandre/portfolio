@@ -7,15 +7,15 @@ export const projects = [
       "This project showcases my ability to create visually stunning and responsive online storefronts. Featuring sleek product displays, intuitive navigation, and dynamic design elements, this project showcases my commitment to crafting user-centric and visually appealing websites in the fast-paced world of streetwear.",
     description:
       "This project showcases my ability to create visually stunning and responsive online storefronts. Featuring sleek product displays, intuitive navigation, and dynamic design elements, this project showcases my commitment to crafting user-centric and visually appealing websites in the fast-paced world of streetwear.",
-    tech: [],
+    tech: ["WordPress", "WooCommerce", "Bluehost", "PHP"],
     source: { url: "/projects/cinq14" },
     link: [],
     preview: {
-      url: "/images/cinq14/Hero.png",
+      url: "/images/cinq14/hero.png",
       alt: "Screenshot of the Home page of the e-commerce website of Cinq14.",
     },
     images: [
-      "/images/cinq14/Hero.gif",
+      "/images/cinq14/hero.gif",
       "/images/cinq14/about.png",
       "/images/cinq14/collection.gif",
       "/images/cinq14/shirt-black.gif",
@@ -27,7 +27,8 @@ export const projects = [
     tags: ["Native", "Web-App", "Front-End", "Back-End"],
     shortDescription:
       "Seamlessly blending the convenience of digital transactions with the unique demands of live experiences, this POS system ensures swift and secure transactions for vendors and organizers alike. From ticket sales to merchandise purchases, the app streamlines the entire sales process, providing real-time insights and enhancing the overall event management. Embrace efficiency and elevate the festival experience with this all-encompassing POS web and native app solution.",
-    description: "",
+    description:
+      "Seamlessly blending the convenience of digital transactions with the unique demands of live experiences, this POS system ensures swift and secure transactions for vendors and organizers alike. From ticket sales to merchandise purchases, the app streamlines the entire sales process, providing real-time insights and enhancing the overall event management. Embrace efficiency and elevate the festival experience with this all-encompassing POS web and native app solution.",
     tech: [
       "React",
       "GraphQL",

@@ -22,10 +22,12 @@ export default function Project() {
       >
         <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
           <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
-            Projects
+            Couple of Projects
           </Heading>
           <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
-            Here a small list of some of the projects I've worked on.
+            Dive into a Spectrum of Creativity: Unveiling a Collection of
+            Purposeful and Visionary Projects, Each a Testament to Skill,
+            Innovation, and Dedication.
           </Text>
         </Stack>
 
