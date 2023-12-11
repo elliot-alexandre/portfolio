@@ -1,15 +1,13 @@
-import { useGLTF } from "@react-three/drei";
+import { ObjectMap } from "@react-three/fiber";
 import { useRef } from "react";
-import { Mesh } from "three";
+import { Group } from "three";
 
-export function Island(props: any) {
-  const fileUrl = "/monkey8.glb";
-  const mesh: any = useRef<Mesh>(null!);
-  const { nodes, materials } = useGLTF(fileUrl);
-  const group = useRef();
+export function Island(data: ObjectMap) {
+  const groupRef: any = useRef<Group>(null!);
+  const { nodes, materials } = data;
 
   return (
-    <group ref={group} {...nodes.Ground} {...props} receiveShadow>
+    <group ref={groupRef} {...nodes.Ground} receiveShadow>
       {/* @ts-ignore */}
       <mesh {...nodes.Ground.children[0]} receiveShadow></mesh>
       {/* @ts-ignore */}

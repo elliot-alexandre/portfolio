@@ -1,25 +1,25 @@
 import { useAnimations, useGLTF } from "@react-three/drei";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Group, Mesh } from "three";
 
 export function Monkey() {
-  const fileUrl = "/monkeytest.glb";
+  const fileUrl = "/monkey_assets.glb";
   const mesh = useRef<Mesh>(null!);
   const group = useRef<Group>(null!);
   const { nodes, materials, animations } = useGLTF(fileUrl);
   const { actions } = useAnimations(animations, group);
-
-  console.log(animations);
+  const [isActive, setState] = useState(true);
 
   useEffect(() => {
-    if (actions["no.003"]) {
-      actions["no.003"]
+    if (isActive === true) {
+      //@ts-ignore
+      actions["no.002"]
         .setEffectiveTimeScale(1)
         .setEffectiveWeight(1)
         .fadeIn(0.1)
-        .play().repetitions = 10;
+        .play();
     }
-  }, [actions]);
+  }, []);
 
   return (
     <group ref={group}>

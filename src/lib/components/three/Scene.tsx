@@ -2,17 +2,15 @@
 
 import { useMediaQuery } from "@chakra-ui/react";
 import { OrbitControls, OrthographicCamera, useGLTF } from "@react-three/drei";
-import { Suspense, useRef } from "react";
+import { Suspense } from "react";
 import { Island } from "./Island";
 import { Monkey } from "./Monkey";
 import { PalmTree } from "./Tree";
 import { Assets } from "./assets";
 
 export function SceneMonkeyIsland() {
-  const monkeyRef = useRef();
-  // const lightRef = useRef();
-  // useHelper(lightRef, SpotLightHelper, 1);
-  const { nodes } = useGLTF("/monkeytest.glb");
+  const { nodes, materials } = useGLTF("/monkey_assets.glb");
+
   const targetMonkey = nodes.waist;
 
   const [isLargerThan1024] = useMediaQuery("(min-width: 1024px)");
@@ -59,9 +57,9 @@ export function SceneMonkeyIsland() {
       <Suspense>
         <group rotation-y={-2}>
           <Monkey />
-          <PalmTree />
-          <Island />
-          <Assets />
+          <PalmTree {...{ nodes, materials }} />
+          <Island {...{ nodes, materials }} />
+          <Assets {...{ nodes, materials }} />
         </group>
       </Suspense>
     </>

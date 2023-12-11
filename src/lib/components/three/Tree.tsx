@@ -1,12 +1,11 @@
-import { MeshWobbleMaterial, useGLTF } from "@react-three/drei";
+import { MeshWobbleMaterial } from "@react-three/drei";
+import { ObjectMap } from "@react-three/fiber";
 import { useRef } from "react";
 import { Group } from "three";
 
-export function PalmTree() {
-  const fileUrl = "/monkey8.glb";
+export function PalmTree(data: ObjectMap) {
   const group = useRef<Group>(null!);
-  // const colorMap = useLoader(TextureLoader, fileTextUrl);
-  const { nodes, materials } = useGLTF(fileUrl);
+  const { nodes, materials } = data;
 
   return (
     <group ref={group} {...nodes.Palm} castShadow>
@@ -15,8 +14,11 @@ export function PalmTree() {
         <MeshWobbleMaterial factor={0.1} color={materials["wood.001"]?.color} />
       </mesh>
       <mesh {...nodes.Palm.children[1]} castShadow>
-        {/*  @ts-ignore */}
-        <meshStandardMaterial color={materials["vegetation.001"]?.color} />
+        <MeshWobbleMaterial
+          factor={0.01}
+          /*  @ts-ignore */
+          color={materials["vegetation.001"]?.color}
+        />
       </mesh>
     </group>
   );
