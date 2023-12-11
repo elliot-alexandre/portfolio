@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:turbo": "turbo run build",
-    "postbuild": ". ./.env && next-sitemap --config next-sitemap.config.js",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && pnpm format",

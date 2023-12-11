@@ -83,10 +83,8 @@ export const projects = [
     title: "Newrade Design-System",
     category: ["Front-End"],
     tags: ["React", "Front-End", "UI/UX", "Design System"],
-    shortDescription:
-      "Cautious Invention is a Discord bot project. Utilizing voice recognition technology, this bot responds to specific triggers, empowering users to initiate various actions seamlessly. Whether it's playing music, executing commands, or triggering events, the bot transforms spoken words into dynamic actions. Elevating the user experience within Discord, this project showcases my expertise in integrating advanced features for a more interactive and personalized interaction in the online community.",
-    description:
-      "Cautious Invention is a Discord bot project. Utilizing voice recognition technology, this bot responds to specific triggers, empowering users to initiate various actions seamlessly. Whether it's playing music, executing commands, or triggering events, the bot transforms spoken words into dynamic actions. Elevating the user experience within Discord, this project showcases my expertise in integrating advanced features for a more interactive and personalized interaction in the online community. Does it respect any laws regarding silent recordings? Good question...",
+    shortDescription: "",
+    description: "",
     tech: ["Node.js", "Typescript", "React", "Gatsby", "Figma Api"],
     source: { url: "/projects/newrade-design-system" },
     link: [
