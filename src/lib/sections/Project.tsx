@@ -22,7 +22,7 @@ export default function Project() {
       >
         <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
           <Heading fontSize={{ base: "2xl", sm: "4xl" }} fontWeight={"bold"}>
-            Couple of Projects
+            Portfolio Highlights
           </Heading>
           <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
             Dive into a Spectrum of Creativity: Unveiling a Collection of

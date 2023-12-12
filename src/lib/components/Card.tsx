@@ -32,14 +32,14 @@ export default function Post(data: any) {
       >
         <Box
           h={"210px"}
-          bg={"gray.100"}
+          bg={"gray.900"}
           mt={-6}
           mx={-6}
           mb={6}
           pos={"relative"}
         >
           <Image
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
             src={data.preview.url}
             fill
             alt={data.preview.alt}
@@ -71,13 +71,12 @@ export default function Post(data: any) {
             mb={2}
           >
             {data.tags.map((tag: any, index: number) => (
-              <WrapItem>
+              <WrapItem key={index}>
                 <Badge
                   px={2}
                   py={1}
                   bg={useColorModeValue("gray.50", "gray.800")}
                   fontWeight={"400"}
-                  key={index}
                 >
                   {tag}
                 </Badge>

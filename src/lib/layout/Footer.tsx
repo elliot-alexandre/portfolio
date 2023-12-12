@@ -1,4 +1,4 @@
-import { Flex, Link, Text, useColorMode } from '@chakra-ui/react';
+import { Flex, Text, useColorMode } from "@chakra-ui/react";
 
 const Footer = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -8,14 +8,9 @@ const Footer = () => {
       as="footer"
       width="full"
       justifyContent="center"
-      alignContent={'center'}
+      alignContent={"center"}
     >
-      <Text fontSize="sm">
-        {new Date().getFullYear()} -{' '}
-        <Link href="" isExternal rel="noopener noreferrer">
-          Elliot A. Pellerin
-        </Link>
-      </Text>
+      <Text fontSize="sm">{new Date().getFullYear()} - Elliot A. Pellerin</Text>
     </Flex>
   );
 };

@@ -17,6 +17,9 @@ import { RiGithubFill } from "react-icons/ri";
 import { ThreeComponent } from "../components/three";
 
 export default function Hero() {
+  const openTab = (url: string) => {
+    window.open(url, "_blank", "noreferrer");
+  };
   return (
     <Container maxW={"7xl"}>
       <Stack
@@ -72,6 +75,7 @@ export default function Hero() {
               colorScheme={"blue"}
               bg={"blue.400"}
               _hover={{ bg: "blue.500" }}
+              onClick={() => openTab("mailto:elliot.a.pellerin@gmail.com")}
             >
               Contact
             </Button>
@@ -80,6 +84,7 @@ export default function Hero() {
               size={"lg"}
               fontWeight={"normal"}
               px={6}
+              onClick={() => openTab("https://github.com/elliot-alexandre")}
               leftIcon={<RiGithubFill color={"gray.300"} />}
             >
               Github

@@ -1,8 +1,10 @@
 "use client";
 
+import { Link } from "@chakra-ui/next-js";
 import {
   Badge,
   Box,
+  Button,
   Container,
   Flex,
   Heading,
@@ -15,9 +17,43 @@ import {
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { RiGithubFill } from "react-icons/ri";
 import Carousel from "~/lib/components/Carousels";
 
 function ProjectPage(data: any) {
+  const openTab = (url: string) => {
+    window.open(url, "_blank", "noreferrer");
+  };
+
+  function RenderLinks(link: any) {
+    switch (link.type) {
+      case "Link":
+        return (
+          <Link isExternal={true} href={link.src}>
+            {link.name}
+          </Link>
+        );
+        break;
+      case "Button":
+        return (
+          <Button
+            rounded={"full"}
+            size={"lg"}
+            fontWeight={"normal"}
+            px={6}
+            onClick={() => openTab(link.src)}
+            leftIcon={<RiGithubFill color={"gray.300"} />}
+          >
+            {link.name}
+          </Button>
+        );
+        break;
+      default:
+        return;
+        break;
+    }
+  }
+
   return (
     <Container maxW={"7xl"}>
       <SimpleGrid
@@ -42,6 +78,7 @@ function ProjectPage(data: any) {
             >
               {data?.title}
             </Heading>
+
             <Stack
               align={"center"}
               justify={"flex-start"}
@@ -72,13 +109,21 @@ function ProjectPage(data: any) {
               />
             }
           >
+            <Text
+              fontSize={{ base: "16px", lg: "18px" }}
+              color={useColorModeValue("green.500", "green.300")}
+              fontWeight={"500"}
+              textTransform={"uppercase"}
+            >
+              ({data.date})
+            </Text>
             <VStack spacing={{ base: 4, sm: 6 }}>
               <Text fontSize={"lg"}>{data.description}</Text>
             </VStack>
             <Box>
               <Text
                 fontSize={{ base: "16px", lg: "18px" }}
-                color={useColorModeValue("yellow.500", "yellow.300")}
+                color={useColorModeValue("green.500", "green.300")}
                 fontWeight={"500"}
                 textTransform={"uppercase"}
                 mb={"4"}
@@ -108,6 +153,26 @@ function ProjectPage(data: any) {
                 </List>
               </SimpleGrid>
             </Box>
+
+            {data.links.length > 0 ? (
+              <Box>
+                <Text
+                  fontSize={{ base: "16px", lg: "18px" }}
+                  color={useColorModeValue("green.500", "green.300")}
+                  fontWeight={"500"}
+                  textTransform={"uppercase"}
+                  mb={"4"}
+                >
+                  References
+                </Text>
+
+                {data.links.map((link: any, index: number) =>
+                  RenderLinks(link)
+                )}
+              </Box>
+            ) : (
+              <></>
+            )}
           </Stack>
         </Stack>
       </SimpleGrid>
